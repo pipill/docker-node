@@ -1,6 +1,11 @@
 FROM pipill/armhf-node:8.1.2
 
+RUN [ "cross-build-start" ]
+
 RUN mkdir -p /usr/src/app
+
+RUN [ "cross-build-end" ]
+
 WORKDIR /usr/src/app
 
 ONBUILD ARG NODE_ENV

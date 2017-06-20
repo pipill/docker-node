@@ -1,5 +1,7 @@
 FROM pipill/armhf-buildpack-deps:wheezy
 
+RUN [ "cross-build-start" ]
+
 RUN groupadd --gid 1000 node \
   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
 
@@ -49,5 +51,7 @@ RUN set -ex \
   && ln -s /opt/yarn/bin/yarn /usr/local/bin/yarn \
   && ln -s /opt/yarn/bin/yarn /usr/local/bin/yarnpkg \
   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz
+
+RUN [ "cross-build-start" ]
 
 CMD [ "node" ]

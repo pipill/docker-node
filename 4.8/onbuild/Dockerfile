@@ -1,4 +1,4 @@
-FROM node:4.8.3
+FROM pipill/armhf-node:4.8.3
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app

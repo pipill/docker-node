@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM pipill/armhf-alpine:3.6
 
 ENV NPM_CONFIG_LOGLEVEL info
 ENV NODE_VERSION 8.1.2
